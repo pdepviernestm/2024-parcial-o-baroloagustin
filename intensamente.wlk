@@ -137,3 +137,12 @@ class Evento {
     var descripcion
     var impacto
 }
+
+/*
+Polimorfismo y Herencia:
+Las emociones comparten comportamiento común como puedeLiberarse() y vivirEvento(),
+pero tienen implementaciones específicas dependiendo de la subclase.
+Esto facilita agregar nuevas emociones como Ansiedad, con comportamiento único sin modificar el código existente.
+Grupo de personas y eventos:
+Se encapsuló la lógica para que un grupo completo viva un evento, reutilizando el método de vivirEvento de cada persona
+*/
