@@ -1,0 +1,20 @@
+import intensamente.*
+
+
+test "Evento en grupo con emociones compartidas"
+{
+const evento = new Evento ( descripcion = "ParcialObjetos" , impacto = 50 )
+const persona1 = new Persona( edad = 16)
+const persona2 = new Persona( edad = 18)
+
+const furia1 = new Furia(intensidad = 100, palabrotas = ["tonto", "malo"])
+const alegria1 = new Alegria(intensidad = 80)
+
+persona1.agregarEmocion(furia1)
+persona2.agregarEmocion(alegria1)
+
+
+persona1.vivirEventoEnGrupo(evento, [persona1, persona2])
+
+assert.equals(50, furia1.intensidad() ) // persona 2 explota
+}
